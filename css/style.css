@@ -3,7 +3,7 @@
    Usa exclusivamente os tokens de design-system/tokens.css
    ============================================================ */
 
-:root { --page-max: 80rem; } /* 1280px — largura máxima do conteúdo */
+:root { --page-max: 90rem; } /* 1440px — largura máxima do conteúdo */
 
 * { box-sizing: border-box; }
 
