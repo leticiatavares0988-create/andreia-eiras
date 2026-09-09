@@ -144,10 +144,10 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 }
 .hero__overlay {
   position: absolute; inset: 0;
-  /* a foto atual já vem escurecida; overlay leve, só para garantir contraste do texto */
+  /* calibrado para a foto atual (wash claro): reforço no lado do texto */
   background:
-    linear-gradient(to top, rgba(43, 43, 43, 0.35) 0%, rgba(43, 43, 43, 0) 45%),
-    linear-gradient(100deg, rgba(43, 43, 43, 0.45) 0%, rgba(43, 43, 43, 0.25) 48%, rgba(90, 122, 128, 0.15) 100%);
+    linear-gradient(to top, rgba(43, 43, 43, 0.45) 0%, rgba(43, 43, 43, 0) 45%),
+    linear-gradient(100deg, rgba(43, 43, 43, 0.58) 0%, rgba(43, 43, 43, 0.34) 48%, rgba(90, 122, 128, 0.20) 100%);
 }
 .hero__inner {
   position: relative; z-index: 1;
