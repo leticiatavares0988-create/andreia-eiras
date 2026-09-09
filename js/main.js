@@ -56,9 +56,9 @@
         if (section && pinEl && track) {
           // deslocamento: leva a borda direita do último card até vw - 24px
           var distance = function () {
-            var pageMax = parseFloat(getComputedStyle(document.documentElement).fontSize) *
-              parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--page-max')) || 1280;
-            var padLeft = Math.max(24, (window.innerWidth - pageMax) / 2 + 24);
+            // padding esquerdo real do conteúdo: borda do .wrap do header + 24px internos
+            var header = document.querySelector('.specialties__header');
+            var padLeft = Math.max(24, header.getBoundingClientRect().left + 24);
             return Math.max(0, padLeft + track.scrollWidth - (window.innerWidth - 24));
           };
 
