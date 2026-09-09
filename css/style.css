@@ -3,6 +3,8 @@
    Usa exclusivamente os tokens de design-system/tokens.css
    ============================================================ */
 
+:root { --page-max: 80rem; } /* 1280px — largura máxima do conteúdo */
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: auto; }
@@ -39,7 +41,7 @@ a:focus-visible, button:focus-visible {
   outline-offset: 3px;
 }
 
-.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 24px; }
+.wrap { max-width: var(--page-max); margin: 0 auto; padding-inline: 24px; }
 
 .skip-link {
   position: absolute; left: -9999px; top: 0;
@@ -98,7 +100,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
               padding var(--ae-duration) var(--ae-ease);
 }
 .nav__inner {
-  max-width: 1160px; margin: 0 auto; padding-inline: 24px;
+  max-width: var(--page-max); margin: 0 auto; padding-inline: 24px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
 }
 .nav__brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -146,7 +148,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 }
 .hero__inner {
   position: relative; z-index: 1;
-  width: 100%; max-width: 1160px; margin: 0 auto;
+  width: 100%; max-width: var(--page-max); margin: 0 auto;
   padding: 118px 24px 40px;
   display: flex; flex-direction: column;
 }
@@ -212,7 +214,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .specialties { background: var(--ae-bg); }
 .specialties__pin { padding: 88px 0 72px; overflow: hidden; }
 .specialties__header { margin-bottom: 40px; }
-.specialties__viewport { padding-left: max(24px, calc((100vw - 1160px) / 2 + 24px)); }
+.specialties__viewport { padding-left: max(24px, calc((100vw - var(--page-max)) / 2 + 24px)); }
 .specialties__track {
   display: flex; gap: 22px;
   list-style: none; margin: 0; padding: 8px 24px 24px 0;

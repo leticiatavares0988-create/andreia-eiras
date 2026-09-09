@@ -56,7 +56,9 @@
         if (section && pinEl && track) {
           // deslocamento: leva a borda direita do último card até vw - 24px
           var distance = function () {
-            var padLeft = Math.max(24, (window.innerWidth - 1160) / 2 + 24);
+            var pageMax = parseFloat(getComputedStyle(document.documentElement).fontSize) *
+              parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--page-max')) || 1280;
+            var padLeft = Math.max(24, (window.innerWidth - pageMax) / 2 + 24);
             return Math.max(0, padLeft + track.scrollWidth - (window.innerWidth - 24));
           };
 
