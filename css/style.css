@@ -185,6 +185,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   font-family: var(--ae-font-script);
   font-style: normal; font-weight: 400;
   font-size: 1.12em;
+  line-height: 1; /* Alex Brush tem métricas altas; sem isso a linha do script fica mais espaçada */
   color: var(--ae-teal-100);
 }
 
@@ -368,6 +369,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .cta h2 em {
   font-family: var(--ae-font-script);
   font-style: normal; font-weight: 400; font-size: 1.15em;
+  line-height: 1;
   color: var(--ae-primary-strong);
 }
 .cta__note { margin-bottom: 30px; }
