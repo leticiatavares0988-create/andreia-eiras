@@ -1,0 +1,9 @@
+# arquivos-fonte da marca (originais do manual, não usados pelo site)
+andreia-eiras/
+
+# config local do Claude Code
+.claude/
+
+node_modules/
+.DS_Store
+Thumbs.db

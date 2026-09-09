@@ -1,0 +1,131 @@
+/* ============================================================
+   ANDRÉIA EIRAS — Design Tokens
+   Fisioterapia Especializada em Saúde da Mulher
+   Fonte da paleta: manual de identidade visual (paleta oficial)
+   ============================================================ */
+
+:root {
+  /* ---------- Cores da marca ---------- */
+  /* Teal — cor primária (aquarela da logo) */
+  --ae-teal-700: #5A7A80;   /* derivado: hover/estados escuros */
+  --ae-teal-500: #72979D;   /* oficial — primária */
+  --ae-teal-300: #A3C6CC;   /* oficial — apoio claro */
+  --ae-teal-100: #CDE0E3;   /* aquarela clara (extraída da logo) */
+  --ae-teal-50:  #EDF4F5;   /* derivado: fundos de seção */
+
+  /* Rosé / Vinho — acento feminino e de ação */
+  --ae-wine-700: #7E3242;   /* derivado: hover do acento */
+  --ae-wine-500: #9F3F52;   /* oficial — acento forte / CTA */
+  --ae-rose-300: #D8A3A8;   /* oficial — apoio suave */
+  --ae-rose-100: #F3DEE0;   /* derivado: fundos suaves */
+
+  /* Terrosos — calor e acolhimento */
+  --ae-nude-400:  #C59A84;  /* oficial */
+  --ae-brown-600: #8B5F4A;  /* oficial */
+
+  /* Neutros */
+  --ae-blush-50: #FFF7F5;   /* oficial — fundo padrão do site */
+  --ae-white:    #FFFFFF;   /* oficial */
+  --ae-gray-500: #6B6B6B;   /* oficial — texto secundário */
+  --ae-ink-900:  #2B2B2B;   /* oficial — texto principal */
+  --ae-black:    #000000;   /* oficial — uso restrito (logo P&B) */
+
+  /* ---------- Papéis semânticos ---------- */
+  --ae-bg:              var(--ae-blush-50);
+  --ae-surface:         var(--ae-white);
+  --ae-surface-soft:    var(--ae-teal-50);
+  --ae-text:            var(--ae-ink-900);
+  --ae-text-muted:      var(--ae-gray-500);
+  --ae-primary:         var(--ae-teal-500);
+  --ae-primary-strong:  var(--ae-teal-700);
+  --ae-accent:          var(--ae-wine-500);
+  --ae-accent-strong:   var(--ae-wine-700);
+  --ae-border:          var(--ae-teal-100);
+  --ae-focus-ring:      var(--ae-teal-500);
+
+  /* ---------- Tipografia ---------- */
+  /* Alex Brush ~ script da assinatura | Cormorant Garamond ~ títulos
+     Montserrat ~ corpo e labels (mesma família visual da tagline) */
+  --ae-font-script:  'Alex Brush', cursive;
+  --ae-font-display: 'Cormorant Garamond', Georgia, serif;
+  --ae-font-body:    'Montserrat', 'Segoe UI', system-ui, sans-serif;
+
+  --ae-text-xs:   0.75rem;    /* 12px — labels, legendas       */
+  --ae-text-sm:   0.875rem;   /* 14px — texto de apoio          */
+  --ae-text-base: 1rem;       /* 16px — corpo                   */
+  --ae-text-lg:   1.125rem;   /* 18px — lead                    */
+  --ae-text-xl:   1.5rem;     /* 24px — h3                      */
+  --ae-text-2xl:  2rem;       /* 32px — h2                      */
+  --ae-text-3xl:  2.75rem;    /* 44px — h1                      */
+  --ae-text-hero: 4rem;       /* 64px — display/script          */
+
+  --ae-leading-tight: 1.15;
+  --ae-leading-body:  1.7;
+  --ae-tracking-label: 0.14em; /* labels uppercase, como a tagline */
+
+  /* ---------- Espaçamento (escala de 4px) ---------- */
+  --ae-space-1: 0.25rem;
+  --ae-space-2: 0.5rem;
+  --ae-space-3: 0.75rem;
+  --ae-space-4: 1rem;
+  --ae-space-6: 1.5rem;
+  --ae-space-8: 2rem;
+  --ae-space-12: 3rem;
+  --ae-space-16: 4rem;
+  --ae-space-24: 6rem;
+
+  /* ---------- Raios ---------- */
+  --ae-radius-sm: 6px;      /* inputs, badges  */
+  --ae-radius-md: 12px;     /* cards           */
+  --ae-radius-lg: 24px;     /* blocos de destaque */
+  --ae-radius-pill: 999px;  /* botões          */
+
+  /* ---------- Sombras (tingidas de teal, nunca preto puro) ---------- */
+  --ae-shadow-sm: 0 1px 3px rgba(90, 122, 128, 0.10);
+  --ae-shadow-md: 0 6px 24px rgba(90, 122, 128, 0.14);
+  --ae-shadow-lg: 0 16px 48px rgba(90, 122, 128, 0.18);
+
+  /* ---------- Transições ---------- */
+  --ae-ease: cubic-bezier(0.25, 0.6, 0.3, 1);
+  --ae-duration: 220ms;
+}
+
+/* ============================================================
+   Base recomendada
+   ============================================================ */
+body {
+  margin: 0;
+  background: var(--ae-bg);
+  color: var(--ae-text);
+  font-family: var(--ae-font-body);
+  font-size: var(--ae-text-base);
+  line-height: var(--ae-leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--ae-font-display);
+  font-weight: 500;
+  line-height: var(--ae-leading-tight);
+  color: var(--ae-text);
+  text-wrap: balance;
+}
+
+.ae-script {
+  font-family: var(--ae-font-script);
+  font-weight: 400;
+  color: var(--ae-text);
+}
+
+.ae-label {
+  font-size: var(--ae-text-xs);
+  font-weight: 500;
+  letter-spacing: var(--ae-tracking-label);
+  text-transform: uppercase;
+  color: var(--ae-text-muted);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ae-focus-ring);
+  outline-offset: 2px;
+}
