@@ -188,6 +188,8 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   color: var(--ae-teal-100);
 }
 
+.hero__left { flex: 1; min-width: 0; }
+
 .hero__cards { display: flex; flex-direction: column; gap: 14px; width: 320px; flex-shrink: 0; }
 .glass-card {
   background: rgba(255, 255, 255, 0.13);
@@ -208,8 +210,8 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .glass-card p { font-size: 12.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
 
 .hero__ctas {
-  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
-  padding-top: 40px;
+  display: flex; gap: 14px; flex-wrap: wrap;
+  padding-top: 34px;
 }
 
 /* ============================================================
@@ -408,7 +410,7 @@ address { font-style: normal; font-size: 14px; }
   .hero__inner { padding-top: 104px; }
   .hero__bottom { flex-direction: column; align-items: flex-start; gap: 28px; }
   .hero__cards { width: 100%; max-width: 420px; }
-  .hero__ctas { justify-content: flex-start; padding-top: 32px; padding-bottom: 8px; }
+  .hero__ctas { padding-top: 28px; }
   .about { grid-template-columns: 1fr; gap: 36px; padding-top: 72px; padding-bottom: 72px; }
   .about__media { max-width: 380px; }
   .steps { padding: 72px 0; }
