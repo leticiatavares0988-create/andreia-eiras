@@ -109,7 +109,8 @@ h2 { font-size: clamp(2.775rem, calc(4.5vw + 0.4rem), 3.9rem); margin-bottom: 14
   border-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(8px);
 }
-.btn--glass:hover { background: rgba(255, 255, 255, 0.26); border-color: var(--ae-accent); }
+/* hover: o vidro "solidifica" em branco e o texto assume o teal escuro */
+.btn--glass:hover { background: var(--ae-white); border-color: var(--ae-white); color: var(--ae-primary-strong); }
 
 /* ============================================================
    NAVBAR
