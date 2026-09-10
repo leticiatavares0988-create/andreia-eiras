@@ -488,7 +488,8 @@ address { font-style: normal; font-size: 0.875rem; }
 @media (max-width: 519px) {
   .hero__title { font-size: clamp(2.5rem, 11vw, 3.25rem); }
   .nav__cta { --btn-px: 18px; padding-block: 10px; font-size: 0.75rem; }
-  .nav__logo { height: 42px; }
+  .nav__logo { height: 46px; }
+  .about__signature { font-size: 2rem; white-space: nowrap; }
   .btn { width: 100%; }
   .hero__ctas .btn, .cta__actions .btn { width: auto; flex: 1 1 auto; }
   .footer__inner { grid-template-columns: 1fr; gap: 28px; }
