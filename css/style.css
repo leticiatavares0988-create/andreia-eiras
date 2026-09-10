@@ -75,6 +75,7 @@ a:focus-visible, button:focus-visible {
 }
 
 h2 { font-size: clamp(2.775rem, calc(4.5vw + 0.4rem), 3.9rem); margin-bottom: 14px; }
+h2 em { font-style: normal; color: var(--ae-accent); }
 
 .section-note { color: var(--ae-text-muted); font-size: 1.2rem; max-width: 60ch; }
 
@@ -430,7 +431,7 @@ h2 { font-size: clamp(2.775rem, calc(4.5vw + 0.4rem), 3.9rem); margin-bottom: 14
 .cta h2 { font-size: clamp(2.525rem, calc(4.5vw + 0.4rem), 3.65rem); }
 .cta h2 em {
   font-style: normal;
-  color: var(--ae-primary-strong);
+  color: var(--ae-accent);
 }
 .cta__note { margin-bottom: 30px; max-width: none; white-space: nowrap; }
 @media (max-width: 767px) {
