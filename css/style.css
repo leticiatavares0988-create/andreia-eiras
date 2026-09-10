@@ -139,7 +139,7 @@ h2 em { font-style: normal; color: var(--ae-accent); }
 }
 .nav__brand { display: flex; align-items: center; text-decoration: none; }
 .nav__logo {
-  height: 58px; width: auto; display: block;
+  height: 66px; width: auto; display: block;
   /* logo em branco sobre a foto do hero */
   filter: brightness(0) invert(1);
   transition: filter var(--ae-duration) var(--ae-ease);
@@ -516,7 +516,8 @@ address { font-style: normal; font-size: 0.875rem; }
 @media (max-width: 519px) {
   .hero__title { font-size: clamp(2.5rem, 11vw, 3.25rem); }
   .nav__cta { --btn-px: 18px; padding-block: 10px; font-size: 0.75rem; }
-  .nav__logo { height: 32px; } /* lettering do nome (proporção larga) */
+  /* lettering do nome: proporção livre (sem o max-width global) e altura fluida */
+  .nav__logo { height: clamp(34px, 11vw, 44px); max-width: none; }
   .about__signature { font-size: 2rem; white-space: nowrap; }
   .btn { width: 100%; }
   .hero__ctas .btn, .cta__actions .btn { width: auto; flex: 1 1 auto; }
