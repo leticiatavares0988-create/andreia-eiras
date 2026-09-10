@@ -21,6 +21,13 @@
 
   /* ---------- rolagem suave nas âncoras (respeita reduced-motion) ---------- */
   var motionOK = window.matchMedia('(prefers-reduced-motion: no-preference)');
+
+  /* ---------- vídeo do hero: só desktop e sem reduced-motion ---------- */
+  var heroVideo = document.querySelector('.hero__video');
+  if (heroVideo && motionOK.matches && window.matchMedia('(min-width: 900px)').matches) {
+    heroVideo.src = 'assets/hero-video.mp4';
+    heroVideo.play().catch(function () { /* autoplay bloqueado: fica o poster */ });
+  }
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var id = link.getAttribute('href');
