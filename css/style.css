@@ -3,9 +3,12 @@
    Usa exclusivamente os tokens de design-system/tokens.css
    ============================================================ */
 
-/* Largura do conteúdo: fixa em 1440px até ~1650px de tela;
-   acima disso acompanha a tela (88vw), com teto de 1920px em ultrawide */
-:root { --page-max: clamp(90rem, 88vw, 120rem); }
+/* Largura do conteúdo: no máximo 80% da tela em desktop;
+   no mobile (<640px) ocupa a largura toda */
+:root { --page-max: 80vw; }
+@media (max-width: 639px) {
+  :root { --page-max: 100vw; }
+}
 
 * { box-sizing: border-box; }
 
