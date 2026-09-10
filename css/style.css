@@ -295,10 +295,13 @@ h2 em { font-style: normal; color: var(--ae-accent); }
 .spec-card h3 { font-size: 1.875rem; margin-bottom: 8px; }
 .spec-card p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
 
-/* mobile: hero sem CTAs (a navbar já tem "Agendar avaliação") */
+/* mobile: hero sem CTAs (a navbar já tem "Agendar avaliação");
+   título desce e fica a 20px dos cards */
 @media (max-width: 639px) {
   .hero__ctas { display: none; }
-  .hero__cards { margin-top: 20px; }
+  .hero .hero__bottom { justify-content: flex-end; gap: 20px; }
+  .hero__left { flex: 0 0 auto; } /* sem esticar: título cola a 20px dos cards */
+  .hero__cards { margin-top: 0; }
 }
 
 /* mobile: scroll nativo com snap (em telas maiores o GSAP pina e desliza) */
@@ -510,7 +513,7 @@ address { font-style: normal; font-size: 0.875rem; }
 @media (max-width: 519px) {
   .hero__title { font-size: clamp(2.5rem, 11vw, 3.25rem); }
   .nav__cta { --btn-px: 18px; padding-block: 10px; font-size: 0.75rem; }
-  .nav__logo { height: 46px; }
+  .nav__logo { height: 32px; } /* lettering do nome (proporção larga) */
   .about__signature { font-size: 2rem; white-space: nowrap; }
   .btn { width: 100%; }
   .hero__ctas .btn, .cta__actions .btn { width: auto; flex: 1 1 auto; }
