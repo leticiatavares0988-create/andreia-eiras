@@ -76,7 +76,7 @@ a:focus-visible, button:focus-visible {
 h2 { font-size: clamp(2.775rem, calc(4.5vw + 0.4rem), 3.9rem); margin-bottom: 14px; }
 h2 em { font-style: normal; color: var(--ae-accent); }
 
-.section-note { color: var(--ae-text-muted); font-size: 1.2rem; max-width: 60ch; }
+.section-note { color: var(--ae-text-muted); font-size: 1.2rem; }
 
 /* ---------- botões ---------- */
 .btn {
