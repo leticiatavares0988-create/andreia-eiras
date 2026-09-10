@@ -357,7 +357,10 @@ h2 em { font-style: normal; color: var(--ae-accent); }
   width: 44px; height: 44px; border-radius: var(--ae-radius-pill);
   background: var(--ae-teal-100); color: var(--ae-primary-strong);
   font-family: var(--ae-font-display); font-size: 1.375rem; font-weight: 600;
-  margin-bottom: 16px;
+  /* Sacramento tem métricas altas: line-height 1 + leve empurrão centraliza o glifo */
+  line-height: 1;
+  padding-top: 0.1em;
+  margin-bottom: calc(16px + 0.2rem);
 }
 .step h3 { font-size: 1.875rem; margin-bottom: 8px; }
 .step p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
