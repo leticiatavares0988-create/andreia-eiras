@@ -269,13 +269,13 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
    SOBRE
    ============================================================ */
 .about {
-  display: grid; grid-template-columns: minmax(280px, 440px) 1fr;
-  gap: 56px; align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center;
   padding-top: 96px; padding-bottom: 96px;
 }
 .about__photo {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background: linear-gradient(160deg, var(--ae-teal-50), var(--ae-teal-100));
   border-radius: var(--ae-radius-lg);
   display: flex; align-items: center; justify-content: center;
