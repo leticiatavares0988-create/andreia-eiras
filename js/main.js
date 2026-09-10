@@ -52,7 +52,6 @@
       /* ---------- entrada do hero em sequência ---------- */
       gsap.timeline({ defaults: { ease: 'power3.out' } })
         .from('.nav__inner', { y: -24, autoAlpha: 0, duration: 0.7 })
-        .from('[data-hero="1"]', { y: 28, autoAlpha: 0, duration: 0.7 }, '-=0.35')
         .from('[data-hero="2"]', { y: 44, autoAlpha: 0, duration: 0.9 }, '-=0.4')
         .from('.glass-card', { x: 36, autoAlpha: 0, duration: 0.7, stagger: 0.14 }, '-=0.55')
         .from('[data-hero="4"] .btn', { y: 22, autoAlpha: 0, duration: 0.6, stagger: 0.1 }, '-=0.4');
