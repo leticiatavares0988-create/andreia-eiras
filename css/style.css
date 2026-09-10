@@ -469,7 +469,7 @@ h2 em { font-style: normal; color: var(--ae-accent); }
   content: '';
   position: absolute; inset: 0;
   background: url('../assets/fundo-aquarela.jpg') center / cover no-repeat;
-  opacity: 0.2;
+  opacity: 0.4;
   pointer-events: none;
 }
 .cta__inner { position: relative; }
