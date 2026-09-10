@@ -209,7 +209,10 @@ h2 { font-size: clamp(2.375rem, 4.5vw, 3.5rem); margin-bottom: 14px; }
   backdrop-filter: blur(12px);
   padding: 18px 20px;
   color: var(--ae-white);
+  transition: border-color var(--ae-duration) var(--ae-ease);
 }
+.glass-card:hover { border-color: var(--ae-teal-300); }
+.glass-card:hover .glass-card__icon { color: var(--ae-accent); background: rgba(255, 255, 255, 0.9); }
 .glass-card__head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .glass-card__head strong { font-family: var(--ae-font-ui); font-size: 0.975rem; font-weight: 600; }
 .glass-card__icon {
@@ -217,6 +220,8 @@ h2 { font-size: clamp(2.375rem, 4.5vw, 3.5rem); margin-bottom: 14px; }
   background: rgba(255, 255, 255, 0.18);
   display: flex; align-items: center; justify-content: center;
   color: var(--ae-teal-100);
+  transition: color var(--ae-duration) var(--ae-ease),
+              background var(--ae-duration) var(--ae-ease);
 }
 .glass-card p { font-size: 0.84rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
 
