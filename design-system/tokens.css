@@ -45,10 +45,11 @@
 
   /* ---------- Tipografia ---------- */
   /* Amsterdam Three ~ script oficial da logo (embutida via @font-face)
-     Cormorant Garamond ~ títulos | Montserrat ~ corpo e labels */
+     Sacramento ~ títulos | Alice ~ corpo | Montserrat ~ UI (botões/labels) */
   --ae-font-script:  'Amsterdam Three', 'Alex Brush', cursive;
-  --ae-font-display: 'Cormorant Garamond', Georgia, serif;
-  --ae-font-body:    'Montserrat', 'Segoe UI', system-ui, sans-serif;
+  --ae-font-display: 'Sacramento', cursive;
+  --ae-font-body:    'Alice', Georgia, serif;
+  --ae-font-ui:      'Montserrat', 'Segoe UI', system-ui, sans-serif;
 
   --ae-text-xs:   0.75rem;    /* 12px — labels, legendas       */
   --ae-text-sm:   0.875rem;   /* 14px — texto de apoio          */

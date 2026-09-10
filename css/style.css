@@ -41,7 +41,7 @@ img { max-width: 100%; }
 
 h1, h2, h3 {
   font-family: var(--ae-font-display);
-  font-weight: 500;
+  font-weight: 400; /* Sacramento só tem um peso */
   line-height: var(--ae-leading-tight);
   margin: 0;
   text-wrap: balance;
@@ -65,6 +65,7 @@ a:focus-visible, button:focus-visible {
 .skip-link:focus { left: 16px; top: 16px; }
 
 .eyebrow {
+  font-family: var(--ae-font-ui);
   font-size: var(--ae-text-xs);
   font-weight: 600;
   letter-spacing: var(--ae-tracking-label);
@@ -73,14 +74,14 @@ a:focus-visible, button:focus-visible {
   margin-bottom: 10px;
 }
 
-h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
+h2 { font-size: clamp(38px, 4.5vw, 56px); margin-bottom: 14px; }
 
 .section-note { color: var(--ae-text-muted); font-size: var(--ae-text-sm); max-width: 60ch; }
 
 /* ---------- botões ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--ae-font-body);
+  font-family: var(--ae-font-ui);
   font-size: 13px; font-weight: 600; letter-spacing: 0.06em;
   border-radius: var(--ae-radius-pill);
   padding: 15px 30px;
@@ -126,6 +127,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 }
 .nav__links { display: flex; gap: 26px; }
 .nav__links a {
+  font-family: var(--ae-font-ui);
   font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85); text-decoration: none;
   transition: color var(--ae-duration) var(--ae-ease);
@@ -164,6 +166,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .hero__eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   white-space: nowrap;
+  font-family: var(--ae-font-ui);
   font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--ae-white);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -173,7 +176,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   backdrop-filter: blur(4px);
 }
 .hero__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ae-teal-300); }
-.hero__support { color: rgba(255, 255, 255, 0.92); font-size: 14px; font-weight: 500; }
+.hero__support { color: rgba(255, 255, 255, 0.92); font-size: 15px; font-weight: 400; }
 
 .hero__bottom {
   flex: 1;
@@ -187,10 +190,8 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   letter-spacing: -0.01em;
 }
 .hero__title em {
-  font-family: var(--ae-font-script);
-  font-style: normal; font-weight: 400;
-  font-size: 1.12em;
-  line-height: 1; /* Alex Brush tem métricas altas; sem isso a linha do script fica mais espaçada */
+  /* título já é script (Sacramento): o destaque vira só cor */
+  font-style: normal;
   color: var(--ae-teal-100);
 }
 
@@ -206,7 +207,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   color: var(--ae-white);
 }
 .glass-card__head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.glass-card__head strong { font-size: 14px; font-weight: 600; }
+.glass-card__head strong { font-family: var(--ae-font-ui); font-size: 14px; font-weight: 600; }
 .glass-card__icon {
   width: 34px; height: 34px; border-radius: var(--ae-radius-pill); flex-shrink: 0;
   background: rgba(255, 255, 255, 0.18);
@@ -253,7 +254,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   color: var(--ae-primary-strong);
   margin-bottom: 18px;
 }
-.spec-card h3 { font-size: var(--ae-text-xl); font-weight: 600; margin-bottom: 8px; }
+.spec-card h3 { font-size: 30px; margin-bottom: 8px; }
 .spec-card p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
 
 /* mobile: scroll nativo com snap (em telas maiores o GSAP pina e desliza) */
@@ -324,7 +325,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   font-family: var(--ae-font-display); font-size: 22px; font-weight: 600;
   margin-bottom: 16px;
 }
-.step h3 { font-size: var(--ae-text-xl); font-weight: 600; margin-bottom: 8px; }
+.step h3 { font-size: 30px; margin-bottom: 8px; }
 .step p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
 
 /* ============================================================
@@ -366,6 +367,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   color: var(--ae-accent);
 }
 .insta-card__label {
+  font-family: var(--ae-font-ui);
   font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--ae-brown-600);
 }
@@ -374,6 +376,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
   background: rgba(90, 122, 128, 0.82);
   color: var(--ae-white);
+  font-family: var(--ae-font-ui);
   font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
   opacity: 0;
   transition: opacity var(--ae-duration) var(--ae-ease);
@@ -383,6 +386,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 
 .badge {
   display: inline-block; align-self: flex-start;
+  font-family: var(--ae-font-ui);
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
   border-radius: var(--ae-radius-pill); padding: 5px 13px;
 }
@@ -397,9 +401,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .cta__inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .cta h2 { font-size: clamp(34px, 4.5vw, 52px); }
 .cta h2 em {
-  font-family: var(--ae-font-script);
-  font-style: normal; font-weight: 400; font-size: 1.15em;
-  line-height: 1;
+  font-style: normal;
   color: var(--ae-primary-strong);
 }
 .cta__note { margin-bottom: 30px; }
@@ -415,9 +417,9 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 }
 .footer__brand img { width: 72px; height: 72px; }
 .footer__name { font-family: var(--ae-font-script); font-size: 30px; margin-top: 6px; }
-.footer__tagline { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ae-text-muted); margin-top: 6px; }
+.footer__tagline { font-family: var(--ae-font-ui); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ae-text-muted); margin-top: 6px; }
 .footer__col h3 {
-  font-family: var(--ae-font-body);
+  font-family: var(--ae-font-ui);
   font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--ae-text-muted); margin-bottom: 14px;
 }
