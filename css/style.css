@@ -326,28 +326,58 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .step p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
 
 /* ============================================================
-   DEPOIMENTOS
+   INSTAGRAM
    ============================================================ */
-.testimonials { padding-top: 96px; padding-bottom: 96px; }
-.testimonials__grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 22px; margin-top: 36px;
+.insta { padding-top: 96px; padding-bottom: 96px; }
+.insta__head {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap; margin-bottom: 36px;
 }
-.quote {
-  margin: 0;
-  background: var(--ae-surface);
-  border: 1px solid var(--ae-border);
+.insta__head .section-note { margin-bottom: 0; }
+.insta__follow { flex-shrink: 0; }
+.insta__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.insta-card {
+  position: relative; display: block;
+  aspect-ratio: 1 / 1;
   border-radius: var(--ae-radius-md);
-  padding: 26px 26px 24px;
-  display: flex; flex-direction: column; gap: 14px;
+  overflow: hidden;
+  border: 1px solid var(--ae-border);
+  background: var(--ae-surface);
 }
-.quote blockquote {
-  margin: 0;
-  font-family: var(--ae-font-display);
-  font-size: 19px; line-height: 1.5; font-weight: 500;
-  flex: 1;
+.insta-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.insta-card--brand {
+  background: linear-gradient(160deg, var(--ae-teal-50), var(--ae-teal-100));
+  display: flex; align-items: center; justify-content: center;
 }
-.quote figcaption { font-size: 13px; font-weight: 600; color: var(--ae-text-muted); }
+.insta-card--brand .insta-card__mark { width: 82%; height: auto; }
+.insta-card--quote {
+  background: var(--ae-rose-100);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; text-decoration: none; padding: 18px; text-align: center;
+}
+.insta-card__script {
+  font-family: var(--ae-font-script);
+  font-size: clamp(28px, 2.6vw, 44px); line-height: 1;
+  color: var(--ae-accent);
+}
+.insta-card__label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ae-brown-600);
+}
+.insta-card__overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  background: rgba(90, 122, 128, 0.82);
+  color: var(--ae-white);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  opacity: 0;
+  transition: opacity var(--ae-duration) var(--ae-ease);
+}
+.insta-card:hover .insta-card__overlay,
+.insta-card:focus-visible .insta-card__overlay { opacity: 1; }
 
 .badge {
   display: inline-block; align-self: flex-start;
@@ -414,8 +444,9 @@ address { font-style: normal; font-size: 14px; }
   .about { grid-template-columns: 1fr; gap: 36px; padding-top: 72px; padding-bottom: 72px; }
   .about__media { max-width: 380px; }
   .steps { padding: 72px 0; }
-  .steps__grid, .testimonials__grid { grid-template-columns: 1fr; }
-  .testimonials { padding-top: 72px; padding-bottom: 72px; }
+  .steps__grid { grid-template-columns: 1fr; }
+  .insta { padding-top: 72px; padding-bottom: 72px; }
+  .insta__grid { grid-template-columns: repeat(2, 1fr); }
   .cta { padding: 72px 0; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
 }
