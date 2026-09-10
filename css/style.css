@@ -86,6 +86,7 @@ h2 em { font-style: normal; color: var(--ae-accent); }
   font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em;
   border-radius: var(--ae-radius-pill);
   padding: 15px var(--btn-px);
+  white-space: nowrap;
   text-decoration: none;
   border: 1.5px solid transparent;
   cursor: pointer;
@@ -229,6 +230,13 @@ h2 em { font-style: normal; color: var(--ae-accent); }
 }
 
 .hero__left { flex: 1; min-width: 0; }
+
+/* quebras de linha responsivas do H1 */
+.br-m { display: none; }
+@media (max-width: 639px) {
+  .br-d { display: none; }
+  .br-m { display: inline; }
+}
 
 .hero__cards { display: flex; flex-direction: column; gap: 14px; width: 320px; flex-shrink: 0; }
 .glass-card {
@@ -452,16 +460,24 @@ h2 em { font-style: normal; color: var(--ae-accent); }
    CTA FINAL
    ============================================================ */
 .cta {
-  /* flores sempre coladas nas laterais, escalando pela altura da seção */
-  background:
-    url('../assets/flores-esq.svg') left center / auto 100% no-repeat,
-    url('../assets/flores-dir.svg') right center / auto 100% no-repeat,
-    var(--ae-teal-50);
+  position: relative;
+  background: var(--ae-teal-50);
   padding: 96px 0;
 }
+/* flores coladas nas laterais, escalando pela altura, com opacidade reduzida */
+.cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    url('../assets/flores-esq.svg') left center / auto 100% no-repeat,
+    url('../assets/flores-dir.svg') right center / auto 100% no-repeat;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.cta__inner { position: relative; }
 /* em telas estreitas as flores invadem o texto: fica só o fundo teal */
 @media (max-width: 767px) {
-  .cta { background-image: none; }
+  .cta::before { display: none; }
 }
 .cta__inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .cta h2 { font-size: clamp(2.525rem, calc(4.5vw + 0.4rem), 3.65rem); }
@@ -525,7 +541,7 @@ address { font-style: normal; font-size: 0.875rem; }
 }
 
 @media (max-width: 519px) {
-  .hero__title { font-size: clamp(2.5rem, 11vw, 3.25rem); }
+  .hero__title { font-size: clamp(1.75rem, 8.6vw, 2.5rem); } /* 1ª linha inteira cabe na tela */
   .nav__cta { --btn-px: 18px; padding-block: 10px; font-size: 0.75rem; }
   /* lettering do nome: proporção livre (sem o max-width global) e altura fluida */
   .nav__logo { height: clamp(34px, 11vw, 44px); max-width: none; }
