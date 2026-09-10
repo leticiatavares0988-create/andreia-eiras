@@ -44,9 +44,9 @@
   --ae-focus-ring:      var(--ae-teal-500);
 
   /* ---------- Tipografia ---------- */
-  /* Alex Brush ~ script da assinatura | Cormorant Garamond ~ títulos
-     Montserrat ~ corpo e labels (mesma família visual da tagline) */
-  --ae-font-script:  'Alex Brush', cursive;
+  /* Amsterdam Three ~ script oficial da logo (embutida via @font-face)
+     Cormorant Garamond ~ títulos | Montserrat ~ corpo e labels */
+  --ae-font-script:  'Amsterdam Three', 'Alex Brush', cursive;
   --ae-font-display: 'Cormorant Garamond', Georgia, serif;
   --ae-font-body:    'Montserrat', 'Segoe UI', system-ui, sans-serif;
 

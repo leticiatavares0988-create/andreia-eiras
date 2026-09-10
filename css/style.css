@@ -3,6 +3,15 @@
    Usa exclusivamente os tokens de design-system/tokens.css
    ============================================================ */
 
+/* Fonte script oficial da marca (mesma do lettering da logo) */
+@font-face {
+  font-family: 'Amsterdam Three';
+  src: url('../assets/fonts/amsterdam-three-slant.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Largura do conteúdo: no máximo 80% da tela em desktop;
    no mobile (<640px) ocupa a largura toda */
 :root { --page-max: 80vw; }
@@ -108,19 +117,12 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   max-width: var(--page-max); margin: 0 auto; padding-inline: 24px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
 }
-.nav__brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.nav__mark {
-  width: 44px; height: 44px; border-radius: var(--ae-radius-pill);
-  background: var(--ae-white); overflow: hidden; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--ae-shadow-sm);
-}
-.nav__mark img { width: 160%; height: 160%; object-fit: contain; }
-.nav__name {
-  font-family: var(--ae-font-script);
-  font-size: 26px; line-height: 1;
-  color: var(--ae-white);
-  transition: color var(--ae-duration) var(--ae-ease);
+.nav__brand { display: flex; align-items: center; text-decoration: none; }
+.nav__logo {
+  height: 58px; width: auto; display: block;
+  /* logo em branco sobre a foto do hero */
+  filter: brightness(0) invert(1);
+  transition: filter var(--ae-duration) var(--ae-ease);
 }
 .nav__links { display: flex; gap: 26px; }
 .nav__links a {
@@ -132,7 +134,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .nav__cta { padding: 11px 24px; }
 
 .nav.is-scrolled { background: var(--ae-bg); box-shadow: var(--ae-shadow-sm); padding: 10px 0; }
-.nav.is-scrolled .nav__name { color: var(--ae-text); }
+.nav.is-scrolled .nav__logo { filter: none; }
 .nav.is-scrolled .nav__links a { color: var(--ae-text-muted); }
 .nav.is-scrolled .nav__links a:hover { color: var(--ae-accent); }
 .nav.is-scrolled .nav__mark { border: 1px solid var(--ae-border); }
@@ -455,7 +457,7 @@ address { font-style: normal; font-size: 14px; }
   .hero__title { font-size: clamp(40px, 11vw, 52px); }
   .hero__eyebrow { font-size: 9px; letter-spacing: 0.09em; padding: 7px 12px; gap: 6px; }
   .nav__cta { padding: 10px 18px; font-size: 12px; }
-  .nav__name { display: none; }
+  .nav__logo { height: 42px; }
   .btn { width: 100%; }
   .hero__ctas .btn, .cta__actions .btn { width: auto; flex: 1 1 auto; }
   .footer__inner { grid-template-columns: 1fr; gap: 28px; }
