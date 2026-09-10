@@ -192,7 +192,7 @@ h2 em { font-style: normal; color: var(--ae-accent); }
   content: '';
   position: absolute; inset: 0;
   background: url('../assets/hero-wash.jpg') center / cover no-repeat;
-  opacity: 0.44;
+  opacity: 0.35;
 }
 .hero__overlay {
   position: absolute; inset: 0;
