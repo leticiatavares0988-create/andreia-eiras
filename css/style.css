@@ -292,7 +292,7 @@ h2 em { font-style: normal; color: var(--ae-accent); }
   color: var(--ae-primary-strong);
   margin-bottom: 18px;
 }
-.spec-card h3 { font-size: 1.875rem; margin-bottom: 8px; }
+.spec-card h3 { font-size: 2.075rem; margin-bottom: 8px; }
 .spec-card p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
 
 /* mobile: hero sem CTAs (a navbar já tem "Agendar avaliação");
