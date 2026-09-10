@@ -293,7 +293,8 @@ h2 { font-size: clamp(2.775rem, calc(4.5vw + 0.4rem), 3.9rem); margin-bottom: 14
 .about {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 64px; align-items: center;
-  padding-top: 96px; padding-bottom: 96px;
+  /* especialidades já termina com ~96px de respiro (pin + track) */
+  padding-top: 8px; padding-bottom: 96px;
 }
 .about__photo {
   position: relative;
@@ -464,7 +465,7 @@ address { font-style: normal; font-size: 0.875rem; }
   .hero__bottom { flex-direction: column; align-items: flex-start; gap: 28px; }
   .hero__cards { width: 100%; max-width: 420px; }
   .hero__ctas { padding-top: 28px; }
-  .about { grid-template-columns: 1fr; gap: 36px; padding-top: 72px; padding-bottom: 72px; }
+  .about { grid-template-columns: 1fr; gap: 36px; padding-top: 8px; padding-bottom: 72px; }
   .about__media { max-width: 380px; }
   .steps { padding: 72px 0; }
   .steps__grid { grid-template-columns: 1fr; }
