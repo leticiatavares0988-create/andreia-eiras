@@ -16,7 +16,7 @@
   <a class="skip-link" href="#especialidades">Pular para o conteúdo</a>
 
   <!-- ===================== NAVBAR ===================== -->
-  <header class="nav" id="topo">
+  <header class="nav">
     <div class="nav__inner">
       <a class="nav__brand" href="#topo" aria-label="Andréia Eiras, voltar ao início">
         <picture>
@@ -37,7 +37,7 @@
 
   <main>
     <!-- ===================== HERO ===================== -->
-    <section class="hero" aria-label="Apresentação">
+    <section class="hero" id="topo" aria-label="Apresentação">
       <picture>
         <source media="(max-width: 639px)" srcset="assets/hero-mobile.jpg">
         <img class="hero__bg" src="assets/hero.jpg" alt="" fetchpriority="high">
@@ -256,7 +256,9 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <div class="footer__brand">
-        <img class="footer__logo" src="assets/logo-horizontal.png" alt="Andréia Eiras — Fisioterapia especializada em saúde da mulher" width="478" height="124" loading="lazy">
+        <a href="#topo" aria-label="Voltar ao início">
+          <img class="footer__logo" src="assets/logo-horizontal.png" alt="Andréia Eiras — Fisioterapia especializada em saúde da mulher" width="478" height="124" loading="lazy">
+        </a>
       </div>
       <div class="footer__col">
         <h3>Contato</h3>
