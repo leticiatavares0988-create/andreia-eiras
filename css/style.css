@@ -251,8 +251,8 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
 .spec-card h3 { font-size: var(--ae-text-xl); font-weight: 600; margin-bottom: 8px; }
 .spec-card p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
 
-/* mobile: scroll nativo com snap */
-@media (max-width: 899px) {
+/* mobile: scroll nativo com snap (em telas maiores o GSAP pina e desliza) */
+@media (max-width: 639px) {
   .specialties__pin { padding: 72px 0 56px; }
   .specialties__viewport {
     overflow-x: auto; padding-left: 24px;
@@ -278,12 +278,7 @@ h2 { font-size: clamp(30px, 4vw, var(--ae-text-3xl)); margin-bottom: 14px; }
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
 }
-.about__mark { width: 78%; opacity: 0.5; }
-.about__placeholder {
-  position: absolute; bottom: 18px;
-  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--ae-primary-strong); font-weight: 600;
-}
+.about__portrait { width: 100%; height: 100%; object-fit: cover; display: block; }
 .about__text p + p { margin-top: 14px; }
 .about__text > p { max-width: 56ch; }
 .about__creds {

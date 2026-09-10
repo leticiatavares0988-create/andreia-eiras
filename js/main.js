@@ -23,7 +23,7 @@
   mm.add(
     {
       motionOK: '(prefers-reduced-motion: no-preference)',
-      isDesktop: '(min-width: 900px)'
+      isDesktop: '(min-width: 640px)'
     },
     function (context) {
       var c = context.conditions;
