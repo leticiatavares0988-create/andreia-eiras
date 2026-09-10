@@ -427,12 +427,15 @@ h2 { font-size: clamp(2.775rem, calc(4.5vw + 0.4rem), 3.9rem); margin-bottom: 14
    ============================================================ */
 .cta { background: var(--ae-teal-50); padding: 96px 0; }
 .cta__inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
-.cta h2 { font-size: clamp(2.125rem, 4.5vw, 3.25rem); }
+.cta h2 { font-size: clamp(2.525rem, calc(4.5vw + 0.4rem), 3.65rem); }
 .cta h2 em {
   font-style: normal;
   color: var(--ae-primary-strong);
 }
-.cta__note { margin-bottom: 30px; }
+.cta__note { margin-bottom: 30px; max-width: none; white-space: nowrap; }
+@media (max-width: 767px) {
+  .cta__note { white-space: normal; }
+}
 .cta__actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
 /* ============================================================
