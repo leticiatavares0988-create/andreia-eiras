@@ -74,9 +74,9 @@ a:focus-visible, button:focus-visible {
   margin-bottom: 10px;
 }
 
-h2 { font-size: clamp(2.375rem, 4.5vw, 3.5rem); margin-bottom: 14px; }
+h2 { font-size: clamp(2.775rem, calc(4.5vw + 0.4rem), 3.9rem); margin-bottom: 14px; }
 
-.section-note { color: var(--ae-text-muted); font-size: var(--ae-text-sm); max-width: 60ch; }
+.section-note { color: var(--ae-text-muted); font-size: 1.2rem; max-width: 60ch; }
 
 /* ---------- botões ---------- */
 .btn {
