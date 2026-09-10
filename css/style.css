@@ -176,7 +176,7 @@ h2 { font-size: clamp(2.375rem, 4.5vw, 3.5rem); margin-bottom: 14px; }
   backdrop-filter: blur(4px);
 }
 .hero__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ae-teal-300); }
-.hero__support { color: rgba(255, 255, 255, 0.92); font-size: 0.9375rem; font-weight: 400; }
+.hero__support { color: rgba(255, 255, 255, 0.92); font-size: 1rem; font-weight: 400; }
 
 .hero__bottom {
   flex: 1;
@@ -211,14 +211,14 @@ h2 { font-size: clamp(2.375rem, 4.5vw, 3.5rem); margin-bottom: 14px; }
   color: var(--ae-white);
 }
 .glass-card__head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.glass-card__head strong { font-family: var(--ae-font-ui); font-size: 0.875rem; font-weight: 600; }
+.glass-card__head strong { font-family: var(--ae-font-ui); font-size: 0.975rem; font-weight: 600; }
 .glass-card__icon {
   width: 34px; height: 34px; border-radius: var(--ae-radius-pill); flex-shrink: 0;
   background: rgba(255, 255, 255, 0.18);
   display: flex; align-items: center; justify-content: center;
   color: var(--ae-teal-100);
 }
-.glass-card p { font-size: 0.7813rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.glass-card p { font-size: 0.84rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
 
 .hero__ctas {
   display: flex; gap: 14px; flex-wrap: wrap;
