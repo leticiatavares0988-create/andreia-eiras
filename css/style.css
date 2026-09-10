@@ -486,7 +486,10 @@ address { font-style: normal; font-size: 0.875rem; }
   border-top: 1px solid var(--ae-border);
   padding-top: 20px; padding-bottom: 24px;
   font-size: 0.7813rem; color: var(--ae-text-muted);
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
 }
+.footer__base a { color: var(--ae-text); text-decoration: none; }
+.footer__base a:hover { color: var(--ae-accent); }
 
 /* ============================================================
    RESPONSIVO
