@@ -452,7 +452,11 @@ h2 em { font-style: normal; color: var(--ae-accent); }
    CTA FINAL
    ============================================================ */
 .cta {
-  background: var(--ae-teal-50) url('../assets/fundo-flores.svg') center / cover no-repeat;
+  /* flores sempre coladas nas laterais, escalando pela altura da seção */
+  background:
+    url('../assets/flores-esq.svg') left center / auto 100% no-repeat,
+    url('../assets/flores-dir.svg') right center / auto 100% no-repeat,
+    var(--ae-teal-50);
   padding: 96px 0;
 }
 /* em telas estreitas as flores invadem o texto: fica só o fundo teal */
