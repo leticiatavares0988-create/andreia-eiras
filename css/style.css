@@ -21,10 +21,9 @@
 
 * { box-sizing: border-box; }
 
+/* rolagem de âncoras é animada via GSAP ScrollToPlugin (js/main.js);
+   sem JS ou com reduced-motion, o salto nativo é o fallback */
 html { scroll-behavior: auto; }
-@media (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
-}
 
 body {
   margin: 0;

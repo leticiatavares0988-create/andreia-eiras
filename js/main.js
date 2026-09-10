@@ -17,6 +17,26 @@
 
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
+  if (typeof ScrollToPlugin !== 'undefined') gsap.registerPlugin(ScrollToPlugin);
+
+  /* ---------- rolagem suave nas âncoras (respeita reduced-motion) ---------- */
+  var motionOK = window.matchMedia('(prefers-reduced-motion: no-preference)');
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = link.getAttribute('href');
+      if (id.length < 2 || !motionOK.matches || typeof ScrollToPlugin === 'undefined') return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      gsap.to(window, {
+        duration: 1.25,
+        ease: 'power3.inOut',
+        scrollTo: { y: target, offsetY: 72 },
+        overwrite: 'auto'
+      });
+      history.pushState(null, '', id);
+    });
+  });
 
   var mm = gsap.matchMedia();
 
