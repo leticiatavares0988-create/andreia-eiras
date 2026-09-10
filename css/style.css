@@ -500,8 +500,13 @@ h2 em { font-style: normal; color: var(--ae-accent); }
   color: var(--ae-text-muted); margin-bottom: 14px;
 }
 .footer__col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
-.footer__col a { color: var(--ae-text); text-decoration: none; font-size: 0.875rem; }
+.footer__col a {
+  color: var(--ae-text); text-decoration: none; font-size: 0.875rem;
+  display: inline-flex; align-items: center; gap: 8px;
+}
 .footer__col a:hover { color: var(--ae-accent); }
+.footer__icon { color: var(--ae-primary-strong); flex-shrink: 0; }
+.footer__col a:hover .footer__icon { color: var(--ae-accent); }
 address { font-style: normal; font-size: 0.875rem; }
 .footer__base {
   border-top: 1px solid var(--ae-border);
