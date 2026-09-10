@@ -346,9 +346,12 @@ h2 em { font-style: normal; color: var(--ae-accent); }
 }
 .step {
   background: var(--ae-bg);
+  border: 1px solid transparent;
   border-radius: var(--ae-radius-md);
   padding: 30px 28px;
+  transition: border-color var(--ae-duration) var(--ae-ease);
 }
+.step:hover { border-color: var(--ae-accent); }
 .step__num {
   display: flex; align-items: center; justify-content: center;
   width: 44px; height: 44px; border-radius: var(--ae-radius-pill);
