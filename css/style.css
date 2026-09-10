@@ -464,21 +464,15 @@ h2 em { font-style: normal; color: var(--ae-accent); }
   background: var(--ae-teal-50);
   padding: 96px 0;
 }
-/* flores coladas nas laterais, escalando pela altura, com opacidade reduzida */
+/* textura aquarela a 20% sobre o fundo teal */
 .cta::before {
   content: '';
   position: absolute; inset: 0;
-  background:
-    url('../assets/flores-esq.svg') left center / auto 100% no-repeat,
-    url('../assets/flores-dir.svg') right center / auto 100% no-repeat;
-  opacity: 0.4;
+  background: url('../assets/fundo-aquarela.jpg') center / cover no-repeat;
+  opacity: 0.2;
   pointer-events: none;
 }
 .cta__inner { position: relative; }
-/* em telas estreitas as flores invadem o texto: fica só o fundo teal */
-@media (max-width: 767px) {
-  .cta::before { display: none; }
-}
 .cta__inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .cta h2 { font-size: clamp(2.525rem, calc(4.5vw + 0.4rem), 3.65rem); }
 .cta h2 em {
