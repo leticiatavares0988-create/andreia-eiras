@@ -26,6 +26,7 @@
   var heroVideo = document.querySelector('.hero__video');
   if (heroVideo && motionOK.matches && window.matchMedia('(min-width: 900px)').matches) {
     heroVideo.src = 'assets/hero-video.mp4';
+    heroVideo.closest('.hero').classList.add('hero--video');
     heroVideo.play().catch(function () { /* autoplay bloqueado: fica o poster */ });
   }
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {

@@ -187,6 +187,13 @@ h2 em { font-style: normal; color: var(--ae-accent); }
 @media (min-width: 900px) {
   .hero__video[src] { display: block; }
 }
+/* wash azul sobre o vídeo — replica o tratamento que a foto já traz embutido */
+.hero--video .hero__overlay::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('../assets/hero-wash.jpg') center / cover no-repeat;
+  opacity: 0.55;
+}
 .hero__overlay {
   position: absolute; inset: 0;
   /* calibrado para a foto atual (wash claro): reforço no lado do texto */
