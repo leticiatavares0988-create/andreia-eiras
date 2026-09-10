@@ -279,6 +279,13 @@ h2 em { font-style: normal; color: var(--ae-accent); }
 .spec-card h3 { font-size: 1.875rem; margin-bottom: 8px; }
 .spec-card p { font-size: var(--ae-text-sm); color: var(--ae-text-muted); }
 
+/* mobile: hero sem CTA duplicado (a navbar já tem "Agendar avaliação")
+   e mais respiro entre o botão restante e os cards */
+@media (max-width: 639px) {
+  .hero__ctas .btn--primary { display: none; }
+  .hero__cards { margin-top: 20px; }
+}
+
 /* mobile: scroll nativo com snap (em telas maiores o GSAP pina e desliza) */
 @media (max-width: 639px) {
   .specialties__pin { padding: 72px 0 56px; }
