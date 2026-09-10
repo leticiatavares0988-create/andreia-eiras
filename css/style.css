@@ -93,15 +93,17 @@ h2 em { font-style: normal; color: var(--ae-accent); }
               color var(--ae-duration) var(--ae-ease),
               border-color var(--ae-duration) var(--ae-ease);
 }
-.btn--primary { background: var(--ae-accent); color: var(--ae-white); }
+.btn--primary { position: relative; background: var(--ae-accent); color: var(--ae-white); }
+/* seta surge dentro do padding direito, sem alterar a largura do botão */
 .btn--primary::after {
   content: '→';
-  max-width: 0; opacity: 0; overflow: hidden;
-  transition: max-width var(--ae-duration) var(--ae-ease),
-              opacity var(--ae-duration) var(--ae-ease);
+  position: absolute; right: 10px;
+  opacity: 0; transform: translateX(-5px);
+  transition: opacity var(--ae-duration) var(--ae-ease),
+              transform var(--ae-duration) var(--ae-ease);
 }
 .btn--primary:hover { background: var(--ae-accent-strong); }
-.btn--primary:hover::after { max-width: 1.2em; opacity: 1; }
+.btn--primary:hover::after { opacity: 1; transform: translateX(0); }
 .btn--secondary { background: transparent; color: var(--ae-primary-strong); border-color: var(--ae-primary); }
 .btn--secondary:hover { background: var(--ae-teal-50); }
 .btn--glass {
