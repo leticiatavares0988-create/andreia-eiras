@@ -159,7 +159,7 @@ h2 { font-size: clamp(2.375rem, 4.5vw, 3.5rem); margin-bottom: 14px; }
 .hero__inner {
   position: relative; z-index: 1;
   width: 100%; max-width: var(--page-max); margin: 0 auto;
-  padding: 118px 24px 40px;
+  padding: 118px 24px 88px;
   display: flex; flex-direction: column;
 }
 .hero__top { max-width: 380px; }
