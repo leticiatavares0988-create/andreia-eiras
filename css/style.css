@@ -590,9 +590,9 @@ address { font-style: normal; font-size: 0.875rem; }
 
 .spec-dialog {
   border: none;
-  width: min(580px, calc(100vw - 48px));
-  max-height: min(82vh, 680px);
-  padding: 38px 40px 34px;
+  width: min(780px, calc(100vw - 48px));
+  max-height: 90vh;
+  padding: 38px 44px 36px;
   background: var(--ae-surface); color: var(--ae-text);
   border-radius: var(--ae-radius-lg);
   box-shadow: var(--ae-shadow-lg);
