@@ -15,6 +15,26 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* ---------- painéis "Saiba mais" das especialidades (independe de GSAP) ---------- */
+  document.querySelectorAll('[data-dialog]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var dlg = document.getElementById(btn.getAttribute('data-dialog'));
+      if (dlg && typeof dlg.showModal === 'function') {
+        dlg.showModal();
+        document.documentElement.classList.add('has-dialog');
+      }
+    });
+  });
+  document.querySelectorAll('dialog.spec-dialog').forEach(function (dlg) {
+    var close = dlg.querySelector('.spec-dialog__close');
+    if (close) close.addEventListener('click', function () { dlg.close(); });
+    // clique no backdrop fecha
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', function () {
+      document.documentElement.classList.remove('has-dialog');
+    });
+  });
+
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
   if (typeof ScrollToPlugin !== 'undefined') gsap.registerPlugin(ScrollToPlugin);

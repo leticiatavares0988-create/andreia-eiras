@@ -572,3 +572,80 @@ address { font-style: normal; font-size: 0.875rem; }
   .whats-fab:active { transform: scale(0.94); background: var(--ae-accent-strong); }
   .whats-fab:focus-visible { outline: 2px solid var(--ae-white); outline-offset: 3px; }
 }
+
+/* ============================================================
+   "Saiba mais" dos cards + painéis de serviço (dialog)
+   ============================================================ */
+.spec-card { display: flex; flex-direction: column; align-items: flex-start; }
+.spec-card__more {
+  margin-top: auto; padding: 14px 0 0;
+  background: none; border: none; cursor: pointer;
+  font-family: var(--ae-font-ui); font-size: 0.8125rem; font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ae-accent);
+  transition: color var(--ae-duration) var(--ae-ease);
+}
+.spec-card__more:hover { color: var(--ae-accent-strong); }
+.spec-card__more:focus-visible { outline: 2px solid var(--ae-focus-ring); outline-offset: 3px; }
+
+.spec-dialog {
+  border: none;
+  width: min(580px, calc(100vw - 48px));
+  max-height: min(82vh, 680px);
+  padding: 38px 40px 34px;
+  background: var(--ae-surface); color: var(--ae-text);
+  border-radius: var(--ae-radius-lg);
+  box-shadow: var(--ae-shadow-lg);
+  overflow-y: auto;
+}
+.spec-dialog::backdrop {
+  background: rgba(43, 43, 43, 0.45);
+  backdrop-filter: blur(3px);
+}
+.spec-dialog__close {
+  position: absolute; top: 16px; right: 16px;
+  width: 38px; height: 38px; border-radius: var(--ae-radius-pill);
+  background: var(--ae-teal-50); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ae-primary-strong);
+  transition: background var(--ae-duration) var(--ae-ease), color var(--ae-duration) var(--ae-ease);
+}
+.spec-dialog__close:hover { background: var(--ae-rose-100); color: var(--ae-accent); }
+.spec-dialog__title {
+  font-size: 2.4rem; margin-bottom: 12px; padding-right: 40px;
+}
+.spec-dialog p { font-size: 0.9375rem; color: var(--ae-text); }
+.spec-dialog p + p { margin-top: 12px; }
+.spec-dialog h4 {
+  font-family: var(--ae-font-ui);
+  font-size: 0.6875rem; font-weight: 600;
+  letter-spacing: var(--ae-tracking-label); text-transform: uppercase;
+  color: var(--ae-primary-strong);
+  margin: 22px 0 10px;
+}
+.spec-dialog ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.spec-dialog li {
+  font-size: 0.9375rem; padding-left: 18px; position: relative;
+}
+.spec-dialog li::before {
+  content: ''; position: absolute; left: 0; top: 0.55em;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ae-rose-300);
+}
+.spec-dialog li strong { font-family: var(--ae-font-ui); font-weight: 600; font-size: 0.845rem; }
+.spec-dialog .btn { margin-top: 26px; }
+
+/* mobile: painel vira sheet ancorada na base */
+@media (max-width: 639px) {
+  .spec-dialog {
+    width: 100vw; max-width: none;
+    margin: auto 0 0;
+    max-height: 86dvh;
+    border-radius: var(--ae-radius-lg) var(--ae-radius-lg) 0 0;
+    padding: 32px 24px calc(28px + env(safe-area-inset-bottom, 0px));
+  }
+  .spec-dialog .btn { width: 100%; }
+}
+
+/* trava o scroll da página enquanto um painel está aberto */
+html.has-dialog, html.has-dialog body { overflow: hidden; }
