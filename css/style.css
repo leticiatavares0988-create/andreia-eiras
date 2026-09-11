@@ -592,11 +592,28 @@ address { font-style: normal; font-size: 0.875rem; }
   border: none;
   width: min(780px, calc(100vw - 48px));
   max-height: 90vh;
-  padding: 38px 44px 36px;
+  padding: 0;
   background: var(--ae-surface); color: var(--ae-text);
   border-radius: var(--ae-radius-lg);
   box-shadow: var(--ae-shadow-lg);
+}
+/* só o corpo rola; fechar e CTA ficam sempre visíveis */
+.spec-dialog[open] { display: flex; flex-direction: column; }
+.spec-dialog__body {
   overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 38px 44px 16px;
+}
+.spec-dialog__footer {
+  position: relative;
+  flex-shrink: 0;
+  padding: 10px 44px 32px;
+}
+.spec-dialog__footer::before {
+  content: '';
+  position: absolute; left: 0; right: 0; top: -28px; height: 28px;
+  background: linear-gradient(to bottom, transparent, var(--ae-surface));
+  pointer-events: none;
 }
 .spec-dialog::backdrop {
   background: rgba(43, 43, 43, 0.45);
@@ -633,8 +650,6 @@ address { font-style: normal; font-size: 0.875rem; }
   background: var(--ae-rose-300);
 }
 .spec-dialog li strong { font-family: var(--ae-font-ui); font-weight: 600; font-size: 0.845rem; }
-.spec-dialog .btn { margin-top: 26px; }
-
 /* mobile: painel vira sheet ancorada na base */
 @media (max-width: 639px) {
   .spec-dialog {
@@ -642,8 +657,9 @@ address { font-style: normal; font-size: 0.875rem; }
     margin: auto 0 0;
     max-height: 86dvh;
     border-radius: var(--ae-radius-lg) var(--ae-radius-lg) 0 0;
-    padding: 32px 24px calc(28px + env(safe-area-inset-bottom, 0px));
   }
+  .spec-dialog__body { padding: 30px 24px 12px; }
+  .spec-dialog__footer { padding: 10px 24px calc(20px + env(safe-area-inset-bottom, 0px)); }
   .spec-dialog .btn { width: 100%; }
 }
 
